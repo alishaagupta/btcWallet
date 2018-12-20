@@ -18,6 +18,8 @@ var mnemonic = bip39.generateMnemonic();
  */ 
 const seed = bip39.mnemonicToSeedHex(mnemonic);
 
+console.log(seed)
+
 const virgilCrypto = new VirgilCrypto.VirgilCrypto();
 
 /**
@@ -52,7 +54,7 @@ const privateKeyData = virgilCrypto.exportPrivateKey(keyPair.privateKey);
  */
 const publicKeyData = virgilCrypto.exportPublicKey(keyPair.publicKey);
 
-console.log(mnemonic);
+// console.log(mnemonic);
 
-console.log(privateKeyData.toString('base64'));
-console.log(publicKeyData.toString('base64'));
+// console.log(privateKeyData.toString('base64'));
+// console.log(publicKeyData.toString('base64'));
